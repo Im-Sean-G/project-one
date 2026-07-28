@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: 'Roboto', sans-serif; 
+  font-family: "Roboto", sans-serif;
 }
 
 nav {
@@ -22,7 +22,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  }
+}
 
 h1 {
   font-size: 72px;
@@ -33,7 +33,7 @@ h1 {
   margin: 16px 0 24px 0;
 }
 
-button{ 
+button {
   background-color: #05c7cf;
   color: white;
   border: none;
@@ -41,13 +41,13 @@ button{
   font-size: 24px;
   cursor: pointer;
 }
-  
+
 a {
   color: black;
   font-size: 24px;
   font-weight: 700;
 }
- 
+
 .logo {
   width: 300px;
 }
@@ -55,28 +55,27 @@ a {
 ul {
   display: flex;
 }
- li {
-   list-style-type: none;
-   padding-left: 26px;
+li {
+  list-style-type: none;
+  padding-left: 26px;
+}
 
- }
-
- .row {
+.row {
   width: 100%;
   max-width: 1300px;
   margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
- }
+}
 
 #about,
 #discord,
 #contact {
   padding: 48px 0;
-  }
+}
 
- /*
+/*
  
  ABOUT
  
@@ -85,7 +84,7 @@ ul {
 #about {
   background-color: #f8ffdc;
 }
- 
+
 h2 {
   font-size: 60px;
   text-align: center;
@@ -93,9 +92,9 @@ h2 {
 }
 
 .section__description {
-display: flex;
-align-items: center;
-justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .about__img--wrapper {
@@ -103,16 +102,16 @@ justify-content: center;
 }
 
 img {
-width: 100%;
+  width: 100%;
 }
 
 .section__description--wrapper {
-width: 60%;
+  width: 60%;
 }
 
 .about__img--wrapper,
 .section__description--wrapper {
-  padding: 0 24px; 
+  padding: 0 24px;
 }
 
 .section__description--para {
@@ -121,24 +120,23 @@ width: 60%;
   margin-bottom: 24px;
 }
 
- /*
+/*
  
  DISCORD
  
  */
 
- #discord {
-  background-color: #cefeff; 
-
+#discord {
+  background-color: #cefeff;
 }
 
- /*
+/*
  
  CONTACT
  
  */
 
- #contact {
+#contact {
   background-color: #dce9ff;
 }
 
@@ -148,41 +146,42 @@ form {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
+  padding: 0 24px;
 }
 
-input, textarea {
+input,
+textarea {
   margin-bottom: 24px;
   font-size: 20px;
   padding: 6px 12px;
 }
 
- /*
+/*
  
  FOOTER
  
  */
 
- footer {
+footer {
   background-color: #aaf5ff;
   display: flex;
   flex-direction: column;
   align-items: center;
-
+  padding: 48px 0;
 }
 
- .footer__logo {
+.footer__logo {
   max-width: 480px;
-  margin-bottom: 16px
- }
+  margin-bottom: 16px;
+}
 
- .footer__links {
+.footer__links {
   margin-bottom: 32px;
+}
 
- }
-
- .footer__link {
+.footer__link {
   padding: 0 16px;
- }
+}
 
 /* SMALL PHONES, TABLETS, LARGE SMARTPHONES */
 
@@ -193,9 +192,75 @@ input, textarea {
 
   .home__description {
     margin-bottom: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 24px;
+  }
+
+   .home__img--wrapper {
+    width: 100%;
+    padding: 0 24px;
+  }
+
+  .home__description--button {
+    max-width: 240px;
+    
   }
 
   h1 {
     text-align: center;
+    font-size: 60px;
   }
-}
+
+  .sub-header, .section__description--para {
+    text-align: center;
+    font-size: 20px;
+  }
+
+  ul {
+    display: none;
+  }
+
+  .section__description {
+    flex-direction: column-reverse; /* Keeps text above image; use flex-direction: column for image above text */
+    width: 100%;
+  }
+
+  /* Override fixed percentage widths */
+  .about__img--wrapper,
+  .section__description--wrapper {
+    width: 100%;
+    padding: 16px;
+  }
+
+  .about__img--wrapper {
+    margin-bottom: 24px;
+  }
+
+  /* Wrap footer navigation links on smaller screens */
+  .footer__links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 24px;
+  }
+
+  .footer__link {
+    padding: 0 4px;
+    font-size: 18px;
+  }
+
+  #contact {
+    align-items: center; 
+  }
+
+  footer {
+    padding: 48px 24px;
+  }
+
+  .footer__logo {
+    max-width: 360px;
+  }
